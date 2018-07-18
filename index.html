@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+        <style>
+            img {
+            float: right;
+            }
+            #map{
+            height:400px;
+            width:400px;
+            }
+            #map {
+            height: 100%;
+        </style>
+        
+		<title>Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta>http-equiv="X-UA-Compatible" content="ie=edge"> 
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Map</a></li>
+                            <li><a href="#two">Why you should care</a></li>
+                            <li><a href="#three">Checklist</a></li>
+							<li><a href="#four">Who we are</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Give</h1>
+                            <img src="logo.jpg" alt="Logo" style="width:250px;height:200px;margin-left:15px;">
+							<p>Give is an interactive website designed to help you give back to your community with ease. By allowing you to find places in need within your community, Give is a simple and straightforward website to make an impact.</p>
+							
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 fade-up">
+						<div class="inner">
+                        <div id="map"></div>
+							<h2>Map</h2>
+							<p>Below is a map to help you connect with local centers and organizations. 
+                            </p>
+                            <script>
+                                function initMap(){
+                                var options = {zoom:8,
+                                    center:{lat:33.839, lng:84.0585}
+                                }}
+                                var map = new 
+                                google.maps.Map(document.getElementById('map'), options);
+                             </script>
+                             <script async defer
+                                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqrzRqAdwVuJvq9vfluRMS_hMVSDJIl_w&callback=initMap"
+                             ></script>
+                        </div>
+                        
+                        
+                </section>
+              
+
+
+				<!-- Two -->
+					<section id="two" class="wrapper style1 fade-up">
+						<div class="inner">
+                   
+							<h2>Why you should care</h2>
+							<p> Listed below are links with fast facts, so you are more aware of the causes you are donating your time and resources to.</p>
+                        </div>
+                           <div style="height: 400px;">
+                            </div> 
+                        
+                </section>    
+                            
+                            
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Checklist</h2>
+							<p>text.</p>
+                        </div>
+                        <div style="height: 400px;">
+                            </div> 
+                        
+                        
+                            </section> 
+                        
+                            
+							
+
+				<!-- Four -->
+					<section id="four" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Who we are</h2>
+							<p>Text</p>
+                        </div>
+                        <div style="height: 400px;">
+                            </div> 
+                        
+								</section>
+									
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
