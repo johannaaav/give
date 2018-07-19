@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <title>Google Maps Multiple Markers</title> 
+  <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
+</head> 
+<body>
+  <div id="map" style="width: 500px; height: 500px;"></div>
+
+  <script type="text/javascript">
+    var locations = [ 
+      ['Atlanta Mission: The Shepherds Inn', 33.764893, -84.392581],
+      ['Our House', 33.759175, -84.371742],
+      ['Atlanta Childrens Shelter', 33.770969, -84.384433],
+      ['City of Refuge Inc', 33.762281,  -84.430600],
+      ['The Salvation Army', 33.765664, -84.396501],
+      ['Homes of Light', 33.747639, -84.328772],
+      ['HOPE Atlanta', 33.754954, -84.389653],
+      ['Trinity Community Ministries', 33.755051, -84.379113], 
+      ['Rebeccas Tent', 33.791158, -84.348555],
+      ['Nicholas House', 33.737010, -84.379547],
+      ['Carrie Steele Pitts Home', 33.772177, -84.498170]
+      ['Heavens Cove', 33.698556, -84.417184],
+      ['Childrens Homeless Shelter', 33.770969, -84.384433],
+        
+      ['Partnership against Domestic Violence', 33.746778, -84.314757],
+      ['Atlanta Mission: My Sisters House', 33.780235, -84.410167],
+      ['Atlanta Day Shelter for Women and Children', 33.784889, -84.408771],
+      ['Our House', 33.759175, -84.371742],
+      ['Gilgal Inc', 33.698388, -84.406918],
+      ['YWCA of Greater Atlanta', 33.780697, -84.353342],
+      ['Safe Haven Transitional', 33.711304, -84.268923],
+      ['Covenant House Georgia', 33.788230, -84.437988],
+      ['StrongHold Atlanta', 33.951302, -84.337571]
+  ];
+      
+      
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(33.7690608, -84.5050734),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+</body>
+</html>
