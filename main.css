@@ -172,7 +172,10 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
-        color: #0A2A8B
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 14pt;
+        font-family: 'Abel', sans-serif;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -180,7 +183,10 @@ input, select, textarea {
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
-        text-align: center
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        
+        
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -3859,10 +3865,19 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		background-color: #CFF7FF;
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+        background-image: url("images/ShowImage3.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+}
+        
 	}
 
 		#intro p {
